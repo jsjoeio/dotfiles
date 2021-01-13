@@ -18,6 +18,6 @@ ln -s $HOME/dotfiles/.zshrc $HOME/.zshrc
 echo "✅ Successfully symlinked your .zshrc file"
 
 
-echo "⤵ Changing the default shell to zsh"
+echo "⤵ Changing the default shell"
 sudo chsh -s $(which zsh) $USER
-echo "✅ Successfully modified the default shell to $SHELL"
+echo "✅ Successfully modified the default shell"
