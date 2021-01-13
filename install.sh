@@ -6,14 +6,17 @@ echo "⤵ Configuring zsh tools in the $HOME directory..."
 # Note: the install.sh script from zsh asks if you want to set the default shell to zsh
 # We can pass that argument with "-s Y"
 
-# We have to symlink the .zshrc before we curl the install script
-# otherwise it would create a new .zshrc file 
+(cd $HOME && sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)" "" --unattended)
+echo "✅ Successfully installed zsh tools"
+
+
+# We have to symlink the .zshrc after we curl the install script
+# because the default zsh tools installs a new one, even if it finds ours
+rm $HOME/.zshrc
 echo "⤵ Symlinking your .zshrc file"
 ln -s $HOME/dotfiles/.zshrc $HOME/.zshrc
 echo "✅ Successfully symlinked your .zshrc file"
 
-(cd $HOME && sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)" "" --unattended)
-echo "✅ Successfully installed zsh tools"
 
 echo "⤵ Changing the default shell to zsh"
 sudo chsh -s $(which zsh) $USER
