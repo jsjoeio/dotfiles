@@ -10,7 +10,7 @@ echo "⤵ Configuring zsh tools in the $HOME directory..."
 echo "✅ Successfully installed zsh tools"
 
 echo "⤵ Symlinking your .zshrc file"
-ln -s $HOME/dotfiles-test/.zshrc $HOME/.zshrc
+ln -s $HOME/dotfiles/.zshrc $HOME/.zshrc
 echo "✅ Successfully symlinked your .zshrc file"
 
 echo "⤵ Changing the default shell to zsh"
