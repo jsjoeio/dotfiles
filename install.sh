@@ -1,4 +1,58 @@
 ###########################
+# README
+# This script is meant to be used in Coder for my environment set up
+# It assumes I'm using a base image that has Node, Yarn, Go and is Ubuntu-based.
+###########################
+echo -e "
+░░░░░██╗░█████╗░███████╗██╗░██████╗  ██╗███╗░░██╗░██████╗████████╗░█████╗░██╗░░░░░██╗░░░░░
+░░░░░██║██╔══██╗██╔════╝╚█║██╔════╝  ██║████╗░██║██╔════╝╚══██╔══╝██╔══██╗██║░░░░░██║░░░░░
+░░░░░██║██║░░██║█████╗░░░╚╝╚█████╗░  ██║██╔██╗██║╚█████╗░░░░██║░░░███████║██║░░░░░██║░░░░░
+██╗░░██║██║░░██║██╔══╝░░░░░░╚═══██╗  ██║██║╚████║░╚═══██╗░░░██║░░░██╔══██║██║░░░░░██║░░░░░
+╚█████╔╝╚█████╔╝███████╗░░░██████╔╝  ██║██║░╚███║██████╔╝░░░██║░░░██║░░██║███████╗███████╗
+░╚════╝░░╚════╝░╚══════╝░░░╚═════╝░  ╚═╝╚═╝░░╚══╝╚═════╝░░░░╚═╝░░░╚═╝░░╚═╝╚══════╝╚══════╝
+
+░██████╗░█████╗░██████╗░██╗██████╗░████████╗
+██╔════╝██╔══██╗██╔══██╗██║██╔══██╗╚══██╔══╝
+╚█████╗░██║░░╚═╝██████╔╝██║██████╔╝░░░██║░░░
+░╚═══██╗██║░░██╗██╔══██╗██║██╔═══╝░░░░██║░░░
+██████╔╝╚█████╔╝██║░░██║██║██║░░░░░░░░██║░░░
+╚═════╝░░╚════╝░╚═╝░░╚═╝╚═╝╚═╝░░░░░░░░╚═╝░░░
+"
+###########################
+
+
+
+###########################
+# Install Miscelleanous packages and tools 
+###########################
+
+# install jq
+# helpful for installing vsx extensions
+echo -e "\nInstalling jq..."
+sudo apt-get -y install jq
+echo -e "\nInstalled jq version $(jq --version)"
+
+# for developing code-server
+export PKG_CONFIG_PATH=/usr/bin/pkg-config
+
+# Install Rust
+curl https://sh.rustup.rs -sSf | sh -s -- -y
+source $HOME/.cargo/env
+
+# Install GNUPG
+# needed to generate key to verify commits
+sudo apt-get -y install gnupg
+
+# For using NeoVim in VSCode
+sudo apt-get -y install neovim
+
+###########################
+# End installing miscelleanous 
+###########################
+
+
+
+###########################
 # zsh setup
 ###########################
 echo -e "⤵ Installing zsh..."
@@ -39,6 +93,11 @@ else
    echo -e "\nUh-oh! .zshrc missing."
 fi
 
+# Set the default shell
 echo -e "⤵ Changing the default shell"
 sudo chsh -s $(which zsh) $USER
 echo -e "✅ Successfully modified the default shell"
+
+###########################
+# end zsh setup
+###########################
