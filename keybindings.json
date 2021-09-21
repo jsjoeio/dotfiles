@@ -1,8 +1,106 @@
-// Place your key bindings in this file to override the defaults
+// Place your key bindings in this file to override the defaultsauto[]
 [
     {
-        "key": "ctrl+j",
-        "command": "-extension.vim_ctrl+j",
-        "when": "editorTextFocus && vim.active && vim.use<C-j> && !inDebugRepl"
-    }
-]
+      "key": "cmd+p",
+      "command": "workbench.action.showAllSymbols"
+    },
+    {
+      "key": "cmd+t",
+      "command": "-workbench.action.showAllSymbols"
+    },
+    {
+      "key": "cmd+t",
+      "command": "workbench.action.quickOpen"
+    },
+    {
+      "key": "cmd+p",
+      "command": "-workbench.action.quickOpen"
+    },
+    {
+      "key": "cmd+t",
+      "command": "workbench.action.quickOpenNavigateNextInFilePicker",
+      "when": "inFilesPicker && inQuickOpen"
+    },
+    {
+      "key": "cmd+p",
+      "command": "-workbench.action.quickOpenNavigateNextInFilePicker",
+      "when": "inFilesPicker && inQuickOpen"
+    },
+    {
+      "key": "alt+cmd+2",
+      "command": "workbench.action.splitEditorRight"
+    },
+    {
+      "key": "ctrl+-",
+      "command": "-workbench.action.quickInputBack",
+      "when": "inQuickOpen"
+    },
+    {
+      "key": "ctrl+-",
+      "command": "-workbench.action.navigateBack"
+    },
+    {
+      "key": "ctrl+=",
+      "command": "workbench.action.terminal.focus"
+    },
+    {
+      "key": "ctrl+=",
+      "command": "workbench.action.focusActiveEditorGroup",
+      "when": "terminalFocus"
+    },
+    {
+      "key": "ctrl+-",
+      "command": "workbench.action.focusSideBar"
+    },
+    {
+      "key": "ctrl+-",
+      "command": "workbench.action.focusActiveEditorGroup",
+      "when": "sideBarFocus"
+    },
+    {
+      "key": "ctrl+]",
+      "command": "workbench.action.nextSideBarView",
+      "when": "sideBarFocus"
+    },
+    {
+      "key": "ctrl+[",
+      "command": "workbench.action.previousSideBarView",
+      "when": "sideBarFocus"
+    },
+    {
+      "key": "cmd+n",
+      "command": "workbench.action.terminal.new",
+      "when": "terminalFocus"
+    },
+    {
+      "key": "ctrl+shift+`",
+      "command": "-workbench.action.terminal.new"
+    },
+    {
+      "key": "cmd+e",
+      "command": "-actions.findWithSelection"
+    },
+    {
+      "key": "cmd+e",
+      "command": "workbench.action.toggleSidebarVisibility"
+    },
+    {
+      "key": "cmd+b",
+      "command": "-workbench.action.toggleSidebarVisibility"
+    },
+    {
+      "key": "cmd+w",
+      "command": "workbench.action.terminal.kill",
+      "when": "terminalFocus && terminalProcessSupported"
+    },
+    {
+      "key": "alt+cmd+down",
+      "command": "workbench.action.terminal.focusNext",
+      "when": "terminalFocus"
+    },
+    {
+      "key": "alt+cmd+up",
+      "command": "workbench.action.terminal.focusPrevious",
+      "when": "terminalFocus"
+    },
+  ]
