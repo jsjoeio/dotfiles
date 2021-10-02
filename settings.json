@@ -1,0 +1,8 @@
+{
+    "git.enableSmartCommit": true,
+    "git.confirmSync": false,
+    "git.autofetch": true,
+    "workbench.colorTheme": "Default Dark+",
+    "editor.formatOnSave": true,
+    "terminal.integrated.defaultProfile.linux": "zsh"
+}
