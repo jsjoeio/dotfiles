@@ -1,7 +1,11 @@
 #!/bin/sh
 
 echo "Copying over keybindings for code-server"
-cp -f keybindings.json  /home/coder/.local/share/code-server/User/keybindings.json
+cp -f code-server/keybindings.json  /home/coder/.local/share/code-server/User/keybindings.json
+
+echo "Copying over settings for code-server"
+cp -f code-server/settings.json  /home/coder/.local/share/code-server/User/settings.json
+
 
 ###########################
 # zsh setup
