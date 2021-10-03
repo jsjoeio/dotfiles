@@ -4,5 +4,8 @@
     "git.autofetch": true,
     "workbench.colorTheme": "Default Dark+",
     "editor.formatOnSave": true,
-    "terminal.integrated.defaultProfile.linux": "zsh"
+    "terminal.integrated.defaultProfile.linux": "zsh",
+    "[typescript]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    }
 }
