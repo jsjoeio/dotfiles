@@ -147,7 +147,7 @@
     "when": "editorTextFocus && vim.active && vim.use<C-v> && !inDebugRepl"
   },
   {
-    "key": "ctrl+win+unknown",
+    "key": "alt+win+left",
     "command": "workbench.action.previousEditor",
     "when": "!isMac"
   },
@@ -157,7 +157,7 @@
     "when": "!isMac"
   },
   {
-    "key": "ctrl+win+unknown",
+    "key": "alt+win+right",
     "command": "workbench.action.nextEditor",
     "when": "!isMac"
   },
