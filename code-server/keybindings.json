@@ -145,5 +145,25 @@
     "key": "ctrl+v",
     "command": "-extension.vim_ctrl+v",
     "when": "editorTextFocus && vim.active && vim.use<C-v> && !inDebugRepl"
+  },
+  {
+    "key": "ctrl+win+unknown",
+    "command": "workbench.action.previousEditor",
+    "when": "!isMac"
+  },
+  {
+    "key": "ctrl+pageup",
+    "command": "-workbench.action.previousEditor",
+    "when": "!isMac"
+  },
+  {
+    "key": "ctrl+win+unknown",
+    "command": "workbench.action.nextEditor",
+    "when": "!isMac"
+  },
+  {
+    "key": "ctrl+pagedown",
+    "command": "-workbench.action.nextEditor",
+    "when": "!isMac"
   }
 ]
