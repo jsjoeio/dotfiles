@@ -7,5 +7,22 @@
     "terminal.integrated.defaultProfile.linux": "zsh",
     "[typescript]": {
         "editor.defaultFormatter": "esbenp.prettier-vscode"
-    }
+    },
+    "vscode-neovim.neovimExecutablePaths.linux": "/usr/bin/nvim",
+    "editor.minimap.enabled": false,
+    "editor.renderWhitespace": "none",
+    "editor.hideCursorInOverviewRuler": true,
+    "editor.renderIndentGuides": false,
+    "editor.folding": false,
+    "editor.occurrencesHighlight": false,
+    "editor.glyphMargin": false,
+    "explorer.openEditors.visible": 0,
+    "workbench.activityBar.visible": false,
+    "workbench.editor.showIcons": false,
+    "workbench.editor.tabCloseButton": "off",
+    "workbench.statusBar.visible": false,
+    "workbench.colorCustomizations": {
+        "tab.activeBorder": "#0000"
+    },
+    "indenticator.color.dark": "rgba(255,255,255,.1)"
 }
