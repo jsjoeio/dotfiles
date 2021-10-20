@@ -5,6 +5,8 @@
     "workbench.colorTheme": "Default Dark+",
     "editor.formatOnSave": true,
     "terminal.integrated.defaultProfile.linux": "zsh",
+    "terminal.integrated.defaultProfile.osx": "zsh",
+    "terminal.integrated.defaultProfile.windows": "zsh",
     "[typescript]": {
         "editor.defaultFormatter": "esbenp.prettier-vscode"
     },
