@@ -196,5 +196,15 @@
     "key": "cmd+w",
     "command": "-workbench.action.closeGroup",
     "when": "activeEditorGroupEmpty && multipleEditorGroups"
+  },
+  {
+    "key": "cmd+k",
+    "command": "workbench.action.focusActiveEditorGroup",
+    "when": "terminalFocus"
+  },
+  {
+    "key": "cmd+k",
+    "command": "-workbench.action.terminal.clear",
+    "when": "terminalFocus && terminalProcessSupported"
   }
 ]
