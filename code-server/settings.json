@@ -2,7 +2,7 @@
     "git.enableSmartCommit": true,
     "git.confirmSync": false,
     "git.autofetch": true,
-    "workbench.colorTheme": "Default Dark+",
+    "workbench.colorTheme": "Abyss",
     "editor.formatOnSave": true,
     "terminal.integrated.defaultProfile.linux": "zsh",
     "terminal.integrated.defaultProfile.osx": "zsh",
