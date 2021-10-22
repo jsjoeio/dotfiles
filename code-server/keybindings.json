@@ -89,6 +89,11 @@
     "when": "terminalFocus && terminalProcessSupported"
   },
   {
+    "key": "cmd+w",
+    "command": "workbench.action.terminal.kill",
+    "when": "terminalFocus && terminalProcessSupported"
+  },
+  {
     "key": "alt+cmd+down",
     "command": "workbench.action.terminal.focusNext",
     "when": "terminalFocus"
