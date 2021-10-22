@@ -227,7 +227,7 @@
     "when": "terminalFocus && terminalProcessSupported"
   },
   {
-    "key": "ctrl+k",
+    "key": "cmd+k",
     "command": "workbench.action.focusActiveEditorGroup",
     "when": "terminalFocus"
   },
