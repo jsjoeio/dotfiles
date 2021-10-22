@@ -176,7 +176,7 @@
     "command": "workbench.action.toggleSidebarVisibility"
   },
   {
-    "key": "ctrl+j",
+    "key": "cmd+j",
     "command": "terminal.focus"
   },
   {
@@ -385,5 +385,13 @@
     "key": "ctrl+j",
     "command": "-editor.action.insertLineAfter",
     "when": "editorTextFocus && neovim.ctrlKeysInsert && !neovim.recording && neovim.mode == 'insert'"
+  },
+  {
+    "key": "cmd+j",
+    "command": "workbench.action.terminal.focus"
+  },
+  {
+    "key": "ctrl+j",
+    "command": "workbench.action.terminal.focus"
   }
 ]
