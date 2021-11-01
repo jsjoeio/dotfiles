@@ -11,7 +11,7 @@ cp -f code-server/settings.json  /home/coder/.local/share/code-server/User/setti
 # zsh setup
 ###########################
 echo -e "⤵ Installing zsh..."
-sudo apt-get -y install zsh
+sudo apt update && apt-get -y install zsh
 echo -e "✅ Successfully installed zsh version: $(zsh --version)"
 
 # Set up zsh tools
@@ -54,3 +54,9 @@ git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:
 echo -e "⤵ Changing the default shell"
 sudo chsh -s $(which zsh) $USER
 echo -e "✅ Successfully modified the default shell"
+
+### neovim install and setup
+sudo apt install -y software-properties-common 
+sudo apt update && sudo add-apt-repository --yes ppa:neovim-ppa/unstable
+sudo apt-get install -y neovim
+echo -e "✅ Successfully installed neovim version: $(nvim --version)"
