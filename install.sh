@@ -11,7 +11,7 @@ cp -f code-server/settings.json  /home/coder/.local/share/code-server/User/setti
 # zsh setup
 ###########################
 echo -e "⤵ Installing zsh..."
-sudo apt update && apt-get -y install zsh
+sudo apt update && sudo apt-get -y install zsh
 echo -e "✅ Successfully installed zsh version: $(zsh --version)"
 
 # Set up zsh tools
