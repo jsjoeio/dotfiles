@@ -28,25 +28,8 @@ else
    echo -e "✅ Successfully installed zsh tools"
 fi
 
-# Set up symlink for .zshrc
-ZSHRC_LINK=$HOME/.zshrc
-if [ -L ${ZSHRC_LINK} ] ; then
-   if [ -e ${ZSHRC_LINK} ] ; then
-      echo -e "\n.zshrc is symlinked corrected"
-   else
-      echo -e "\nOops! Your symlink appears to be broken."
-   fi
-elif [ -e ${ZSHRC_LINK} ] ; then
-   echo -e "\nYour .zshrc exists but is not symlinked."
-   # We have to symlink the .zshrc after we curl the install script
-   # because the default zsh tools installs a new one, even if it finds ours
-   rm $HOME/.zshrc
-   echo -e "⤵ Symlinking your .zshrc file"
-   ln -s $HOME/dotfiles-test/.zshrc $HOME/.zshrc
-   echo -e "✅ Successfully symlinked your .zshrc file"
-else
-   echo -e "\nUh-oh! .zshrc missing."
-fi
+# Copy over .zshrc
+cp -f ./dotfiles-test/.zshrc ~/.zshrc
 
 # Install zsh-syntax-highlighting
 git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
@@ -56,7 +39,10 @@ sudo chsh -s $(which zsh) $USER
 echo -e "✅ Successfully modified the default shell"
 
 ### neovim install and setup
-sudo apt install -y software-properties-common 
+sudo apt install -y software-properties-common
 sudo apt update && sudo add-apt-repository --yes ppa:neovim-ppa/unstable
 sudo apt-get install -y neovim
 echo -e "✅ Successfully installed neovim version: $(nvim --version)"
+
+# switch shell to zsh
+exec zsh
