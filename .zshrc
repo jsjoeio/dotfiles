@@ -19,10 +19,3 @@ plugins=(
 
 source $ZSH/oh-my-zsh.sh
 source $ZSH_CUSTOM/plugins/zsh-syntax-highlighting
-
-# For Go
-export GOPATH=$HOME/golang
-export GOBIN=$GOPATH/bin
-export GOROOT=$HOME/go
-export PATH=$PATH:$GOPATH
-export PATH=$PATH:$GOROOT/bin
