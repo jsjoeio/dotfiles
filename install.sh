@@ -1,10 +1,10 @@
 #!/bin/sh
 
 echo "Copying over keybindings for code-server"
-cp -f code-server/keybindings.json  /home/coder/.local/share/code-server/User/keybindings.json
+cp -f code-server/keybindings.json  $HOME/.local/share/code-server/User/keybindings.json
 
 echo "Copying over settings for code-server"
-cp -f code-server/settings.json  /home/coder/.local/share/code-server/User/settings.json
+cp -f code-server/settings.json  $HOME/.local/share/code-server/User/settings.json
 
 
 ###########################
@@ -29,7 +29,7 @@ else
 fi
 
 # Copy over .zshrc
-cp -f ./dotfiles-test/.zshrc ~/.zshrc
+cp -f ./dotfiles/.zshrc ~/.zshrc
 
 # Install zsh-syntax-highlighting
 git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
