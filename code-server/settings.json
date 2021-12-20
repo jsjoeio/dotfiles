@@ -29,5 +29,6 @@
     "indenticator.color.dark": "rgba(255,255,255,.1)",
     "terminal.integrated.fontSize": 16,
     "editor.fontSize": 16,
-    "editor.lineNumbers": "relative"
+    "editor.lineNumbers": "relative",
+    "terminal.integrated.mouseWheelScrollSensitivity": 0.1
 }
