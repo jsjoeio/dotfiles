@@ -7,6 +7,9 @@
     "terminal.integrated.defaultProfile.linux": "zsh",
     "terminal.integrated.defaultProfile.osx": "zsh",
     "terminal.integrated.defaultProfile.windows": "zsh",
+    "[typescriptreact]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
     "[typescript]": {
         "editor.defaultFormatter": "esbenp.prettier-vscode"
     },
@@ -30,5 +33,5 @@
     "terminal.integrated.fontSize": 16,
     "editor.fontSize": 16,
     "editor.lineNumbers": "relative",
-    "terminal.integrated.mouseWheelScrollSensitivity": 0.1
+    "terminal.integrated.mouseWheelScrollSensitivity": 0.1,
 }
