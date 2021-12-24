@@ -403,5 +403,15 @@
     "key": "alt+c",
     "command": "-workbench.action.terminal.toggleFindCaseSensitive",
     "when": "terminalFindFocused && terminalProcessSupported || terminalFocus && terminalProcessSupported"
-  }
+  },
+  {
+    "key": "ctrl+n",
+    "command": "workbench.action.terminal.new",
+    "when": "terminalFocus"
+  },
+  {
+    "key": "cmd+n",
+    "command": "workbench.action.terminal.new",
+    "when": "terminalFocus"
+  },
 ]
