@@ -34,4 +34,5 @@
     "editor.fontSize": 16,
     "editor.lineNumbers": "relative",
     "terminal.integrated.mouseWheelScrollSensitivity": 0.1,
+    "extensions.autoUpdate": false,
 }
