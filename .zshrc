@@ -14,7 +14,6 @@ plugins=(
   git
   golang
   zsh-syntax-highlighting
-  deno
 )
 
 source $ZSH/oh-my-zsh.sh
