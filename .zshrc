@@ -5,7 +5,9 @@ export TEST="hello world!"
 export EDITOR="vim"
 export PKG_CONFIG_PATH=/usr/bin/pkg-config
 
-ZSH_THEME="robbyrussell"
+# sindresorhus/pure - beautiful prompt and theme
+autoload -U promptinit; promptinit
+prompt pure
 
 DISABLE_AUTO_UPDATE="true"
 DISABLE_UPDATE_PROMPT="true"
