@@ -44,5 +44,13 @@ sudo apt update && sudo add-apt-repository --yes ppa:neovim-ppa/unstable
 sudo apt-get install -y neovim
 echo -e "✅ Successfully installed neovim version: $(nvim --version)"
 
+# Need to set user before installing global dependencies
+# https://stackoverflow.com/a/45505787
+sudo npm -g config set user root
+
+# Install zsh theme/prompt
+# workaround: https://github.com/sindresorhus/pure/issues/610#issuecomment-922121006
+sudo npm install --global --allow-root --unsafe-perm=true pure-prompt
+
 # switch shell to zsh
 exec zsh
