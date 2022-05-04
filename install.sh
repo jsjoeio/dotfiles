@@ -44,6 +44,8 @@ sudo apt update && sudo add-apt-repository --yes ppa:neovim-ppa/unstable
 sudo apt-get install -y neovim
 echo -e "✅ Successfully installed neovim version: $(nvim --version)"
 
+# Possibly needed to delete if it was added.
+sudo rm -rf /usr/share/zsh/site-functions
 # Need to set user before installing global dependencies
 # https://stackoverflow.com/a/45505787
 sudo npm -g config set user root
