@@ -6,6 +6,7 @@ export EDITOR="vim"
 export PKG_CONFIG_PATH=/usr/bin/pkg-config
 
 # sindresorhus/pure - beautiful prompt and theme
+fpath+=$HOME/.zsh/pure
 autoload -U promptinit; promptinit
 prompt pure
 
