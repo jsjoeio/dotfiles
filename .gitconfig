@@ -1,0 +1,8 @@
+[core]
+	ignorecase = false
+	editor = /usr/bin/nvim
+[user]
+	name = Joe Previte
+	email = jjprevite@gmail.com
+[push]
+	default = current
