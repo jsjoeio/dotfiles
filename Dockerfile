@@ -43,7 +43,9 @@ RUN apt-get update && apt-get install -y \
   # Language support
   locales \
   gnupg \
-  jq 
+  jq \
+  # needed for neovim plugins that use make
+  build-essential
 
 # Install the desired Node.js version into `/usr/local/`
 ENV NODE_VERSION=16.15.0
