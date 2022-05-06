@@ -70,7 +70,8 @@ RUN apt-get install -y \
   libx11-dev \
   libxkbfile-dev \ 
   python \
-  quilt 
+  quilt \
+  ripgrep
 
 # Install Rust
 ENV RUSTUP_HOME=/home/coder/bin/rustup
