@@ -1,5 +1,6 @@
 #!/bin/sh
 
+# Test comment ignore
 echo "Copying over keybindings for code-server"
 cp -f code-server/keybindings.json  $HOME/.local/share/code-server/User/keybindings.json
 
