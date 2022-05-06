@@ -62,5 +62,13 @@ echo -e "✅ Successfully installed neovim version: $(nvim --version)"
 mkdir -p "$HOME/.zsh"
 git clone https://github.com/sindresorhus/pure.git "$HOME/.zsh/pure"
 
+# Install Rust
+# NOTE: Dean suggested we do it here since we can't do it in the Dockerfile
+curl https://sh.rustup.rs -sSf | sh -s -- -y
+source $HOME/.cargo/env
+
+# sd is used with code-server development
+cargo install sd
+
 # switch shell to zsh
 exec zsh
