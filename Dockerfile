@@ -75,13 +75,6 @@ RUN apt-get install -y \
   quilt \
   ripgrep
 
-# Install Rust
-ENV RUSTUP_HOME=/home/coder/bin/rustup
-ENV CARGO_HOME=/home/coder/bin/cargo
-RUN curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh -s -- -y
-ENV PATH=$PATH:/home/coder/bin/cargo/bin  
-ENV PATH=$PATH:/home/coder/bin/rustup/bin  
-
 # Install Deno
 RUN apt-get install -y unzip
 # We have to do this in Coder because otherwise Deno will be installed in the wrong place
