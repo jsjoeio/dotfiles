@@ -102,6 +102,13 @@ RUN mkdir -p /vsix \
     && cd /vsix \
     && wget -q https://open-vsx.org/api/vscodevim/vim/1.21.10/file/vscodevim.vim-1.21.10.vsix 
 
+# GitHub CLI Installation
+RUN apt-key adv --keyserver keyserver.ubuntu.com --recv-key C99B11DEB97541F0 \
+    && apt-key adv --keyserver keyserver.ubuntu.com --recv-key C99B11DEB97541F0 \
+    && apt-add-repository https://cli.github.com/packages \
+    && sudo apt update \
+    && sudo apt install gh
+
 # Add configure script
 COPY coder/configure /coder/configure
 
