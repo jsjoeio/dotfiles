@@ -10,6 +10,17 @@ cp -f code-server/settings.json  $HOME/.local/share/code-server/User/settings.js
 echo "Copying over .gitconfig"
 cp -f .gitconfig  $HOME/.gitconfig
 
+# Skip if not on Ubuntu
+platform="$(lsb_release -d | awk -F"\t" '{print $2}')"
+
+if ! [ -z "${platform##*Ubuntu*}"]; then 
+    echo "Not Ubuntu, found $platform"
+    echo "Skipping zsh installation and rest of personalize script"
+    exit 0
+else 
+    echo "Found Ubuntu, continuing with script."
+fi
+
 ###########################
 # zsh setup
 ###########################
