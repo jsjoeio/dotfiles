@@ -1,0 +1,35 @@
+#!/bin/bash
+set -euo pipefail
+
+EXT_DIR="/vsix"
+EXTENSION_INSTALL_FLAGS=""
+EXTENSIONS_DIR="/home/coder/.local/share/code-server/extensions"
+
+main() {
+    echo "Checking extensions bundled with image..."
+    # Loop through our extensions directory which contains
+    # vsix extensions we downloaded ahead of time
+    for path_to_ext in "$EXT_DIR"/* ; do
+            ext_name="${path_to_ext#*/}"
+            ext_name_without_suffix="$(basename ${ext_name} .vsix)"
+            # When extensions get installed, their names are lowercased
+            lowercased_ext_name_without_suffix="${ext_name_without_suffix,,}"
+            installed_ext_dir_path="$EXTENSIONS_DIR/$lowercased_ext_name_without_suffix" 
+
+            # Check if installed already
+            if [ -d "$installed_ext_dir_path" ]; then
+                echo "Found '$ext_name'. Skipping installation."
+            else 
+                echo "'$ext_name' not found. Adding to list of extensions to install."
+                EXTENSION_INSTALL_FLAGS+="--install-extension $path_to_ext "
+            fi 
+    done;
+
+    # Check if we need to install any extensions
+    if [ -n "$EXTENSION_INSTALL_FLAGS" ]; then
+        echo "Need to install extensions..."
+        /var/tmp/coder/code-server/bin/code-server $EXTENSION_INSTALL_FLAGS
+    fi
+}
+
+main
