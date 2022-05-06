@@ -6,6 +6,8 @@ cp -f code-server/keybindings.json  $HOME/.local/share/code-server/User/keybindi
 echo "Copying over settings for code-server"
 cp -f code-server/settings.json  $HOME/.local/share/code-server/User/settings.json
 
+echo "Copying over .gitconfig"
+cp -f .gitconfig  $HOME/.gitconfig
 
 ###########################
 # zsh setup
