@@ -100,13 +100,13 @@ RUN mkdir -p /vsix \
 
 # GitHub CLI Installation
 RUN sudo apt update \
-    && sudo apt install software-properties-common \
+    && sudo apt install -y software-properties-common \
     && sudo apt update
 RUN apt-key adv --keyserver keyserver.ubuntu.com --recv-key C99B11DEB97541F0 \
     && apt-key adv --keyserver keyserver.ubuntu.com --recv-key C99B11DEB97541F0 \
     && apt-add-repository https://cli.github.com/packages \
     && sudo apt update \
-    && sudo apt install gh
+    && sudo apt install -y gh
 
 # Add configure script
 COPY coder/configure /coder/configure
