@@ -1,6 +1,8 @@
 #!/bin/bash
 set -euo pipefail
 
+# Note to self: make sure executable
+
 EXT_DIR="/vsix"
 EXTENSION_INSTALL_FLAGS=""
 EXTENSIONS_DIR="/home/coder/.local/share/code-server/extensions"
