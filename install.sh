@@ -1,6 +1,5 @@
 #!/bin/sh
 
-# Test comment ignore
 echo "Copying over keybindings for code-server"
 cp -f code-server/keybindings.json  $HOME/.local/share/code-server/User/keybindings.json
 
@@ -9,6 +8,10 @@ cp -f code-server/settings.json  $HOME/.local/share/code-server/User/settings.js
 
 echo "Copying over .gitconfig"
 cp -f .gitconfig  $HOME/.gitconfig
+
+echo "Copying over Neovim config"
+mkdir -p $HOME/.config/nvim
+cp -f neovim/init.lua  $HOME/.config/nvim/init.lua
 
 # Skip if not on Ubuntu
 platform="$(lsb_release -d | awk -F"\t" '{print $2}')"
