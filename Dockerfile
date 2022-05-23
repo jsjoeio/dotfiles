@@ -1,4 +1,4 @@
-FROM ubuntu:20.04
+FROM ubuntu:20.10
 
 # Build-time argument
 # it will only happen when we build
@@ -42,7 +42,6 @@ RUN apt-get update && apt-get install -y \
   ca-certificates \
   # Language support
   locales \
-  bat \
   gnupg \
   jq \
   # needed for neovim plugins that use make
