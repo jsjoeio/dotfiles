@@ -42,6 +42,7 @@ RUN apt-get update && apt-get install -y \
   ca-certificates \
   # Language support
   locales \
+  bat \
   gnupg \
   jq \
   # needed for neovim plugins that use make
