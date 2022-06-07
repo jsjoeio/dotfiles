@@ -45,7 +45,11 @@ RUN apt-get update && apt-get install -y \
   gnupg \
   jq \
   # needed for neovim plugins that use make
-  build-essential
+  build-essential \
+  # needed for Rust/Bevy
+  g++ \
+  libasound2-dev \
+  libudev-dev
 
 # Install the desired Node.js version into `/usr/local/`
 ENV NODE_VERSION=16.15.0
