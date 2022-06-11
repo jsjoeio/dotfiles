@@ -39,6 +39,11 @@ require('packer').startup(function(use)
          vim.cmd('colorscheme rose-pine')
      end
   })
+  -- Autoclosing quotes and brackets
+  use {
+  	"windwp/nvim-autopairs",
+    config = function() require("nvim-autopairs").setup {} end
+  }
 end)
 
 --Set highlight on search
