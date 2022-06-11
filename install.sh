@@ -1,26 +1,26 @@
 #!/bin/sh
 
 echo "Copying over keybindings for code-server"
-cp -f code-server/keybindings.json  $HOME/.local/share/code-server/User/keybindings.json
+cp -f code-server/keybindings.json $HOME/.local/share/code-server/User/keybindings.json
 
 echo "Copying over settings for code-server"
-cp -f code-server/settings.json  $HOME/.local/share/code-server/User/settings.json
+cp -f code-server/settings.json $HOME/.local/share/code-server/User/settings.json
 
 echo "Copying over .gitconfig"
-cp -f .gitconfig  $HOME/.gitconfig
+cp -f .gitconfig $HOME/.gitconfig
 
 echo "Copying over Neovim config"
 mkdir -p $HOME/.config/nvim
-cp -f neovim/init.lua  $HOME/.config/nvim/init.lua
+cp -f nvim/init.lua $HOME/.config/nvim/init.lua
 
 # Skip if not on Ubuntu
 platform="$(lsb_release -d | awk -F"\t" '{print $2}')"
 
-if ! [ -z "${platform##*Ubuntu*}"]; then 
+if ! [ -z "${platform##*Ubuntu*}"]; then
     echo "Not Ubuntu, found $platform"
     echo "Skipping zsh installation and rest of personalize script"
     exit 0
-else 
+else
     echo "Found Ubuntu, continuing with script."
 fi
 
@@ -34,15 +34,14 @@ echo -e "✅ Successfully installed zsh version: $(zsh --version)"
 # Set up zsh tools
 PATH_TO_ZSH_DIR=$HOME/.oh-my-zsh
 echo -e "Checking if .oh-my-zsh directory exists at $PATH_TO_ZSH_DIR..."
-if [ -d $PATH_TO_ZSH_DIR ]
-then
-   echo -e "\n$PATH_TO_ZSH_DIR directory exists!\nSkipping installation of zsh tools.\n"
+if [ -d $PATH_TO_ZSH_DIR ]; then
+    echo -e "\n$PATH_TO_ZSH_DIR directory exists!\nSkipping installation of zsh tools.\n"
 else
-   echo -e "\n$PATH_TO_ZSH_DIR directory not found."
-   echo -e "⤵ Configuring zsh tools in the $HOME directory..."
+    echo -e "\n$PATH_TO_ZSH_DIR directory not found."
+    echo -e "⤵ Configuring zsh tools in the $HOME directory..."
 
-   (cd $HOME && sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)" "" --unattended)
-   echo -e "✅ Successfully installed zsh tools"
+    (cd $HOME && sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)" "" --unattended)
+    echo -e "✅ Successfully installed zsh tools"
 fi
 
 # Copy over .zshrc
