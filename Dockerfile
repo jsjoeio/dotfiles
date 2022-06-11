@@ -113,6 +113,9 @@ RUN apt-key adv --keyserver keyserver.ubuntu.com --recv-key C99B11DEB97541F0 \
     && sudo apt update \
     && sudo apt install -y gh
 
+# Need tsc available globally for Neovim
+RUN npm i -g typescript
+
 # Add configure script
 COPY coder/configure /coder/configure
 
