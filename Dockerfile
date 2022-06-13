@@ -90,6 +90,10 @@ RUN curl -fsSL https://deno.land/x/install/install.sh | sh && mv /root/.deno/bin
 # Install go1.17.1
 RUN curl -L "https://dl.google.com/go/go1.18.1.linux-amd64.tar.gz" | tar -C /usr/local -xzvf -
 
+# Install nvm
+# used to switch between Node.js versions
+RUN curl https://raw.githubusercontent.com/creationix/nvm/master/install.sh | bash 
+
 # Setup go env vars
 ENV GOROOT /usr/local/go
 ENV PATH $PATH:$GOROOT/bin
