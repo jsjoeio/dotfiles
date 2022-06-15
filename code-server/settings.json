@@ -1,38 +1,38 @@
 {
-    "git.enableSmartCommit": true,
-    "git.confirmSync": false,
-    "git.autofetch": true,
-    "workbench.colorTheme": "Gruvbox Dark Medium",
-    "editor.formatOnSave": true,
-    "terminal.integrated.defaultProfile.linux": "zsh",
-    "terminal.integrated.defaultProfile.osx": "zsh",
-    "terminal.integrated.defaultProfile.windows": "zsh",
-    "[typescriptreact]": {
-        "editor.defaultFormatter": "esbenp.prettier-vscode"
-    },
-    "[typescript]": {
-        "editor.defaultFormatter": "esbenp.prettier-vscode"
-    },
-    "vscode-neovim.neovimExecutablePaths.linux": "/usr/bin/nvim",
-    "editor.minimap.enabled": false,
-    "editor.renderWhitespace": "none",
-    "editor.hideCursorInOverviewRuler": true,
-    "editor.renderIndentGuides": false,
-    "editor.folding": false,
-    "editor.occurrencesHighlight": false,
-    "editor.glyphMargin": false,
-    "explorer.openEditors.visible": 0,
-    "workbench.activityBar.visible": false,
-    "workbench.editor.showIcons": false,
-    "workbench.editor.tabCloseButton": "off",
-    "workbench.statusBar.visible": false,
-    "workbench.colorCustomizations": {
-        "tab.activeBorder": "#0000"
-    },
-    "indenticator.color.dark": "rgba(255,255,255,.1)",
-    "terminal.integrated.fontSize": 16,
-    "editor.fontSize": 16,
-    "editor.lineNumbers": "relative",
-    "terminal.integrated.mouseWheelScrollSensitivity": 0.1,
-    "extensions.autoUpdate": false,
+  "git.enableSmartCommit": true,
+  "git.confirmSync": false,
+  "git.autofetch": true,
+  "workbench.colorTheme": "Yoncé",
+  "editor.formatOnSave": true,
+  "terminal.integrated.defaultProfile.linux": "zsh",
+  "terminal.integrated.defaultProfile.osx": "zsh",
+  "terminal.integrated.defaultProfile.windows": "zsh",
+  "[typescriptreact]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[typescript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "vscode-neovim.neovimExecutablePaths.linux": "/usr/bin/nvim",
+  "editor.minimap.enabled": false,
+  "editor.renderWhitespace": "none",
+  "editor.hideCursorInOverviewRuler": true,
+  "editor.renderIndentGuides": false,
+  "editor.folding": false,
+  "editor.occurrencesHighlight": false,
+  "editor.glyphMargin": false,
+  "explorer.openEditors.visible": 0,
+  "workbench.activityBar.visible": false,
+  "workbench.editor.showIcons": false,
+  "workbench.editor.tabCloseButton": "off",
+  "workbench.statusBar.visible": false,
+  "workbench.colorCustomizations": {
+    "tab.activeBorder": "#0000"
+  },
+  "indenticator.color.dark": "rgba(255,255,255,.1)",
+  "terminal.integrated.fontSize": 16,
+  "editor.fontSize": 16,
+  "editor.lineNumbers": "relative",
+  "terminal.integrated.mouseWheelScrollSensitivity": 0.1,
+  "extensions.autoUpdate": false
 }
