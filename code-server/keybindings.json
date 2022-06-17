@@ -111,7 +111,7 @@
   },
   {
     "key": "ctrl+t",
-    "command": "-workbench.action.showAllSymbols",
+    "command": "-workbench.action.showAllSymbols"
   },
   {
     "key": "ctrl+t",
@@ -214,7 +214,7 @@
   },
   {
     "key": "cmd+k cmd+o",
-   "command": "-workbench.action.files.openFolder"
+    "command": "-workbench.action.files.openFolder"
   },
   {
     "key": "cmd+w",
@@ -423,5 +423,24 @@
     "key": "ctrl+f",
     "command": "-extension.vim_ctrl+f",
     "when": "editorTextFocus && vim.active && vim.use<C-f> && !inDebugRepl && vim.mode != 'Insert'"
+  },
+  {
+    "key": "shift+alt+f",
+    "command": "-filesExplorer.findInFolder",
+    "when": "explorerResourceIsFolder && explorerViewletVisible && filesExplorerFocus && !inputFocus"
+  },
+  {
+    "key": "shift+alt+f",
+    "command": "workbench.files.action.focusFilesExplorer"
+  },
+  {
+    "key": "shift+alt+g",
+    "command": "workbench.view.scm",
+    "when": "workbench.scm.active"
+  },
+  {
+    "key": "ctrl+shift+g",
+    "command": "-workbench.view.scm",
+    "when": "workbench.scm.active"
   }
 ]
