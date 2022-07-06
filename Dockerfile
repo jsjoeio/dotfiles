@@ -68,7 +68,7 @@ RUN echo "deb https://dl.yarnpkg.com/debian/ stable main" | \
 tee /etc/apt/sources.list.d/yarn.list
 RUN apt-get update && apt-get install -y yarn
 
-# Add stuff from Joe's install command
+RUN curl https://bun.sh/install | bash
 
 # code-server dependencies
 RUN apt-get install -y \
