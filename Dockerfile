@@ -68,8 +68,6 @@ RUN echo "deb https://dl.yarnpkg.com/debian/ stable main" | \
 tee /etc/apt/sources.list.d/yarn.list
 RUN apt-get update && apt-get install -y yarn
 
-RUN curl https://bun.sh/install | bash
-
 # code-server dependencies
 RUN apt-get install -y \
   pkg-config \
@@ -84,6 +82,9 @@ RUN apt-get install -y \
 RUN apt-get install -y unzip
 # We have to do this in Coder because otherwise Deno will be installed in the wrong place
 RUN curl -fsSL https://deno.land/x/install/install.sh | sh && mv /root/.deno/bin/deno /bin/deno
+
+# Install Bun (needs unzip)
+RUN curl https://bun.sh/install | bash
 
 # Install Go
 # copied from https://github.com/cdr/enterprise-images/blob/main/images/golang/Dockerfile.ubuntu
