@@ -21,3 +21,7 @@ plugins=(
 
 source $ZSH/oh-my-zsh.sh
 source $ZSH_CUSTOM/plugins/zsh-syntax-highlighting
+
+# bun
+BUN_INSTALL="/home/coder/.bun"
+export PATH="$BUN_INSTALL/bin:$PATH"
