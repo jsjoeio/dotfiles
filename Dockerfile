@@ -74,7 +74,10 @@ RUN apt-get install -y \
   libsecret-1-dev \
   libx11-dev \
   libxkbfile-dev \ 
-  python \
+  # NOTE@jsjoeio - doesn't seem to have a candidate 
+  # for Ubuntu 22.04.
+  # See more: https://github.com/jsjoeio/dotfiles/runs/7242622697?check_suite_focus=true#step:6:4199
+  # python \
   quilt \
   ripgrep
 
