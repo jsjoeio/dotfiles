@@ -62,12 +62,6 @@ https://nodejs.org/dist/v${NODE_VERSION}/node-v${NODE_VERSION}-linux-x64.tar.gz 
   --exclude README.md \
   --strip-components 1 -C /usr/local/
 
-# Install the Yarn package manager
-RUN curl -sS https://dl.yarnpkg.com/debian/pubkey.gpg | apt-key add -
-RUN echo "deb https://dl.yarnpkg.com/debian/ stable main" | \
-tee /etc/apt/sources.list.d/yarn.list
-RUN apt-get update && apt-get install -y yarn
-
 # code-server dependencies
 RUN apt-get install -y \
   pkg-config \
@@ -122,7 +116,8 @@ RUN apt-key adv --keyserver keyserver.ubuntu.com --recv-key C99B11DEB97541F0 \
     && sudo apt install -y gh
 
 # Need tsc available globally for Neovim
-RUN npm i -g typescript typescript-language-server
+# also install yarn
+RUN npm i -g typescript typescript-language-server yarn 
 
 # Add configure script
 COPY coder/configure /coder/configure
