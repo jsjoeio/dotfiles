@@ -46,7 +46,7 @@ RUN apt-get update && apt-get install -y \
   jq \
   # needed for neovim plugins that use make
   build-essential \
-  ctags \
+  exuberant-ctags \
   # needed for Rust/Bevy
   g++ \
   libasound2-dev \
