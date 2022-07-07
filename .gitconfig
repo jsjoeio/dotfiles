@@ -6,3 +6,5 @@
 	email = jjprevite@gmail.com
 [push]
 	default = current
+[init]
+	defaultBranch = main
